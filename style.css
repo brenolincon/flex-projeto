@@ -32,6 +32,7 @@ div img {
   max-width: 992px;
   margin: auto;
   width: 100%;
+  min-width: 320px;
 }
 
 .btn {
@@ -86,6 +87,10 @@ header .menu {
   color: var(--azul-escuro);
   font-size: 48px;
   margin-bottom: 10px;
+}
+
+.apresentacao img {
+  max-width: 600px;
 }
 
 /* QUEM SOMOS*/
@@ -259,4 +264,55 @@ footer .footer {
 
 footer .flex-container a:hover {
   text-decoration: underline;
+}
+
+/*RESPONSIVIDADE*/
+@media (max-width: 600px) {
+  .flex-container {
+    align-items: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .apresentacao {
+    flex-direction: column-reverse;
+  }
+
+  .apresentacao .text-apresentacao {
+    width: 100%;
+  }
+
+  #quem-somos {
+    flex-direction: column-reverse;
+  }
+
+  #quem-somos img {
+    min-width: 320px;
+    margin: auto;
+  }
+
+  .list-servicos {
+    flex-direction: column;
+  }
+
+  .item-servico img {
+    width: 50%;
+    margin: auto;
+  }
+
+  .list-planos {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .list-planos .item-plano {
+    max-width: 90%;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
